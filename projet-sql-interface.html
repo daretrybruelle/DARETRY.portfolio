@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Projet SQL – Portfolio Staissie</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, sans-serif;
+            background: #0b0c14;
+            color: #eef1ff;
+            line-height: 1.6;
+        }
+        header {
+            padding: 20px;
+            background: #121426;
+        }
+        header a {
+            color: #8af5ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3 {
+            color: #8af5ff;
+        }
+        .media-container {
+            margin: 20px 0;
+        }
+        .media-container img,
+        .media-container video {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+        .caption {
+            font-size: 0.95rem;
+            color: #a6b0d4;
+            margin-bottom: 24px;
+        }
+        code {
+            background: #1c1e2e;
+            color: #ffed8a;
+            padding: 2px 6px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        pre {
+            background: #1c1e2e;
+            padding: 12px;
+            border-radius: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="daretry staissie_portfolio_index.html">← Retour au portfolio</a>
+    </header>
+
+    <main>
+        <h1>Projet SQL</h1>
+        <p>
+            Ce projet avait pour objectif de concevoir une <strong>base de données relationnelle</strong> 
+            avec <strong>SQLite</strong> et de mettre en pratique différentes requêtes SQL afin de manipuler 
+            et analyser des ensembles de données.
+        </p>
+
+        <h2>Objectifs</h2>
+        <ul>
+            <li>Modéliser et structurer une base de données relationnelle.</li>
+            <li>Créer et gérer des tables avec <code>CREATE TABLE</code> et <code>INSERT INTO</code>.</li>
+            <li>Exploiter la base à l’aide de requêtes SQL variées (<code>SELECT</code>, conditions, tris, agrégations).</li>
+            <li>Réaliser quelques interactions avec la base via des programmes en <strong>C</strong> et <strong>Python</strong>.</li>
+        </ul>
+
+        <h2>Travail réalisé</h2>
+        <p>
+            La mise en œuvre s’est organisée autour de plusieurs exercices pratiques : 
+        </p>
+        <ul>
+            <li>Ouverture et description d’une base existante (communes de France).</li>
+            <li>Création d’une base simplifiée (fournisseurs, produits, commandes).</li>
+            <li>Écriture de requêtes pour interroger et exploiter les données, comme :
+                <ul>
+                    <li>afficher toutes les communes d’un département donné,</li>
+                    <li>calculer des valeurs moyennes (population, densité),</li>
+                    <li>déterminer la commune la plus vaste,</li>
+                    <li>lister les relations entre fournisseurs et produits.</li>
+                </ul>
+            </li>
+            <li>Exécution de certaines requêtes via des scripts en C et Python.</li>
+        </ul>
+
+        <h2>Exemple de requête</h2>
+        <pre><code>SELECT nom_commune, superficie
+FROM communes
+WHERE departement = 'Dordogne'
+  AND superficie > 1500
+ORDER BY superficie DESC;</code></pre>
+        <p class="caption">Cette requête retourne toutes les communes de Dordogne dont la superficie dépasse 1500 hectares, triées de la plus grande à la plus petite.</p>
+
+        <h2>Résultats</h2>
+        <p>
+            Ce projet a permis d’appliquer les principes fondamentaux des <strong>bases de données relationnelles</strong> 
+            et de maîtriser les principales requêtes SQL. Il a également montré l’intérêt de l’intégration 
+            des bases dans des programmes pour faciliter l’exploitation et l’automatisation des traitements.
+        </p>
+    </main>
+</body>
+</html>
